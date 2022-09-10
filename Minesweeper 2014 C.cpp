@@ -25,7 +25,7 @@ void floodfill(int i, int j) {
     if(!visited[i][j] && a[i][j] == 9) { 
         visited[i][j] = 1;
         a[i][j] = 4;
-	
+	//Remember to floodfill all 8 directions and not just 4
         for(int k = 0; k < 8; k++) {
             floodfill(i + dx[k], j + dy[k]);
         }
